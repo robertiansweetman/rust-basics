@@ -11,7 +11,7 @@ use std::io;
 const PROPS: &str = "you're AMAZING!";
 
 fn show(x: &str) {
-    let y: &str = x.trim_end();
+    let y: &str = x.trim();
     println!("Hi {}, {}", y, PROPS);
 }
 
