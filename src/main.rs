@@ -11,7 +11,7 @@ use std::io;
 const PROPS: &str = "you're AMAZING!";
 
 fn show(x: &str) {
-    let y: &str = x.trim();
+    let y: &str = x.trim();             // trim removes whitespace and carriage return characters off the input
     println!("Hi {}, {}", y, PROPS);
 }
 
@@ -26,3 +26,9 @@ fn main() {
 
     show(& name);
 }
+
+/*
+Shadowing - allows you to re-use variable names AS LONG AS you don't change their type
+            basically doing transitions on a value but having that value be immutable after those transitions have been done
+            you're effectively creating a new variable when you use the let keyword again
+*/
