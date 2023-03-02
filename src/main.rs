@@ -6,11 +6,20 @@
 //     println!("hello, {}!", name);
 // }
 
+use std::io;
+
 fn show(x: &str) {
     println!("Hi, {}", x)
 }
 
 fn main() {
-    let name = "Rob";
-    show(name);
+
+    println!("Hello, what's your name?");
+
+    let mut name: String = String::new();
+
+    io::stdin().read_line(&mut name)
+        .expect("Failed to read line");
+
+    show(& name);
 }
