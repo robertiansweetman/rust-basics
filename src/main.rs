@@ -8,14 +8,17 @@
 
 use std::io;
 
+const PROPS: &str = "you're AMAZING!";
+
 fn show(x: &str) {
-    println!("Hi, {}", x)
+    let y: &str = x.trim_end();
+    println!("Hi {}, {}", y, PROPS);
 }
 
 fn main() {
 
     println!("Hello, what's your name?");
-
+    
     let mut name: String = String::new();
 
     io::stdin().read_line(&mut name)
