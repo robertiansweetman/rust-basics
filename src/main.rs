@@ -11,8 +11,8 @@ use std::io;
 const PROPS: &str = "you're AMAZING!";
 
 fn show(x: &str) {
-    let y: &str = x.trim();             // trim removes whitespace and carriage return characters off the input
-    println!("Hi {}, {}", y, PROPS);
+    // let x: &str = x.trim();             // trim removes whitespace and carriage return characters off the input
+    println!("Hi {}, {}", x.trim(), PROPS); // can include this in the input here, rather than re-assigning or could use shadowing
 }
 
 fn main() {
